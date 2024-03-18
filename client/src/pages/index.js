@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { config } from "../config_Base_Url";
+import { config } from "./config/config_Base_Url";
 
 export default function Home() {
 
