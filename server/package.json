@@ -6,5 +6,17 @@
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.2",
     "nanoid": "^3.3.7"
-  }
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
