@@ -55,35 +55,36 @@ export default function Home() {
         }
 
         <div className="h-[100vh] w-[100vw] flex text-black">
-          <div className="w-[40%] bg-[#fde047]">
-            <div className="h-[60%] p-10 space-y-10">
+          <div className="w-[40%] bg-[#fde047] hidden md:block">
+            <div className="h-[60%] xl:px-10 px-5 py-10 space-y-10">
               <Image src="/url.png" alt="url.png" width={500} height={500} className="w-[20%]"></Image>
-              <div className="p-5 font-serif">
-                <div className="text-[55px] font-bold">
+              <div className="p-5 font-serif text-center space-y-10 xl:text-start xl:space-y-0">
+                <div className="text-[30px] lg:text-[40px] xl:text-[55px] font-bold">
                   SHORTEND
                 </div>
-                <div className="text-[55px] font-bold ml-40">
+                <div className="text-[30px] lg:text-[40px] xl:text-[55px] font-bold xl:ml-40">
                   YOUR
                 </div>
-                <div className="text-[55px] font-bold ml-[300px]">
+                <div className="text-[30px] lg:text-[40px] xl:text-[55px] font-bold xl:ml-[300px]">
                   URL
                 </div>
               </div>
             </div>
-            <div className="bg-[url('/bg.png')] bg-contain h-[40%]"></div>
+
+            <div className="bg-[url('/bg.png')] bg-cover bg-no-repeat bg-bottom h-[40%]"></div>
           </div>
 
-          <div className="w-[60%] bg-neutral-700 flex items-center justify-center">
+          <div className="w-[100%] md:w-[60%] bg-neutral-700 flex items-center justify-center">
             <div className="p-3 bg-white rounded-md space-y-5 drop-shadow-lg relative">
 
               {isLoading &&
-                <div className="absolute top-0 left-0 bg-white rounded-md w-[100%] h-[100%]">
-                  <Image src="/loading.png" alt="loading" width={500} height={500} className="w-[50%] h-[100%] m-auto animate-spin"></Image>
+                <div className="absolute top-0 left-0 bg-white rounded-md w-[100%] h-[100%] flex">
+                  <Image src="/loading.png" alt="loading" width={500} height={500} className="w-[80px] h-[80px] m-auto animate-spin"></Image>
                 </div>
               }
 
               <div className="font-bold text-[15px] space-y-2"><div>Shortend your URL</div> <hr className="border-black" /></div>
-              <div className="w-[400px] space-y-2">
+              <div className=" md:w-[400px] space-y-2">
                 <label htmlFor="url" className="text-[13px] text-gray-800">Enter your url:</label>
                 <input type="text" id="url" name="url" value={inputVal} className="p-2 outline-0 border-2 border-neutral-400 w-full rounded-md text-[13px]" onChange={(e) => setInputVal(e.target.value)} />
               </div>
