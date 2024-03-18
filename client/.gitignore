@@ -6,7 +6,7 @@
 .pnp.js
 .yarn/install-state.gz
 
-./src/config.js
+/src/config_Base_Url.js
 
 # testing
 /coverage
