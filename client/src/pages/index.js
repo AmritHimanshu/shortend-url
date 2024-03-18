@@ -1,11 +1,11 @@
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { config } from "./config/config_Base_Url";
+// import { config } from "./config/config_Base_Url";
 
 export default function Home() {
 
-  const BASE_URL = config;
+  const BASE_URL = "https://shortend-url-api.vercel.app";
 
   const [inputVal, setInputVal] = useState('');
   const [shortUrl, setShortUrl] = useState('');
