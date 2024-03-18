@@ -32,8 +32,14 @@ export default function Home() {
         setShortUrl(`${BASE_URL}/${data.id}`);
         setIsLoading(false);
       }
+      // else {
+      //   window.alert("Internal server error");
+      //   window.location.reload();
+      // }
     } catch (error) {
       console.log(error);
+      window.alert("Internal server error");
+      window.location.reload();
     }
   }
 
