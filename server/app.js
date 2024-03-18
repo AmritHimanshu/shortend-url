@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5001;
 
 app.use(express.json());
 app.use(cors({
-    origin:'http://localhost:3000'
+    origin:'https://shortend-url.vercel.app'
 }));
 
 app.use(require('./route/url'));
