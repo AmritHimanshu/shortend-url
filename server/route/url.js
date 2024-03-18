@@ -43,4 +43,9 @@ router.get('/:shortId', async (req, res) => {
 })
 
 
+router.get('/', (req, res) => {
+    res.status(200).json({ Message: "How are you" });
+})
+
+
 module.exports = router;
