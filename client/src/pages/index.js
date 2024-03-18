@@ -1,13 +1,11 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import Head from "next/head";
 import { useState } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
+import Head from "next/head";
+import Image from "next/image";
+import { config } from "../config";
 
 export default function Home() {
 
-  const BASE_URL = "http://localhost:5000"
+  const BASE_URL = config;
 
   const [inputVal, setInputVal] = useState('');
   const [shortUrl, setShortUrl] = useState('');
@@ -59,7 +57,7 @@ export default function Home() {
         <div className="h-[100vh] w-[100vw] flex text-black">
           <div className="w-[40%] bg-[#fde047]">
             <div className="h-[60%] p-10 space-y-10">
-              <Image src="/url.png" width={500} height={500} className="w-[20%]"></Image>
+              <Image src="/url.png" alt="url.png" width={500} height={500} className="w-[20%]"></Image>
               <div className="p-5 font-serif">
                 <div className="text-[55px] font-bold">
                   SHORTEND
@@ -80,7 +78,7 @@ export default function Home() {
 
               {isLoading &&
                 <div className="absolute top-0 left-0 bg-white rounded-md w-[100%] h-[100%]">
-                  <Image src="/loading.png" width={500} height={500} className="w-[50%] h-[100%] m-auto animate-spin"></Image>
+                  <Image src="/loading.png" alt="loading" width={500} height={500} className="w-[50%] h-[100%] m-auto animate-spin"></Image>
                 </div>
               }
 
